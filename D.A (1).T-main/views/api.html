@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Set the character encoding for the document -->
+  <meta charset="UTF-8">
+
+  <!-- Define the viewport settings for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Set the favicon for the website -->
+  <link rel="icon"
+    href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800">
+
+  <!-- Link to an external stylesheet for styling -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Preconnect to external font resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Link to an external font family from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <!-- Set the title of the webpage -->
+  <title>Company Financials Bar Graph</title>
+
+  <!-- Include Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Include Axios library for making API requests -->
+
+
+</head>
+
+<body>
+  <!-- Start of the webpage body -->
+  <header>
+    <!-- Header section containing navigation -->
+
+    
+    <nav class="navbar">
+      <div class="brand-title">  <img src="/assets/logo.png" alt="Logo"></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="/index">Home</a></li>
+          <li > <a class="active-link" href="/api">Stock Fundamentals</a></li>
+          <li> <a  href="/news">Stocks News</a></li>
+          <li> <a href="/asian">Asian Stocks</a></li>
+          <li> <a href="/land">About us</a></li>
+          <li> <a href="/sitemap">Sitemap</a></li>
+          <li> <a  href="/video">Video</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Start of the main content area -->
+  <div class="searchBar">
+    <!-- Search bar section -->
+    <div class="search">
+      <!-- Search input and buttons -->
+      <label for="companySymbol">Enter Company Symbol:</label>
+      <input type="text" id="companySymbol" placeholder="For eg'AAPL'" autocomplete="off" />
+      <ul id="suggestions"></ul><br>
+
+
+      <!-- Button for triggering stock fundamentals -->
+      <button id="on">Stock Fundamentals</button>
+
+      <!-- Button for clearing the input field -->
+      <button onclick id="on1">Clear the field</button>
+
+      <!-- Tooltip with additional information -->
+      <div class="tooltip"> &#9432;
+        <p class="tooltip-text">After you have entered the stock symbol and clicked on the Financial Information button
+          the webpage will show the stock chart, net income, revenue and will also show the
+          cash on hand the company has, its debt and the total common shares available.
+        </p>
+      </div>
+    </div>
+
+    <!-- Container for displaying charts -->
+    <div class="container">
+      <!-- Chart 1 -->
+      <div class="chart1">
+        <h2 id="priceChart"></h2>
+        <canvas id="stockChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Chart container for displaying company symbol -->
+    <div class="chartContainer">
+      <h2 id="companySymbolDisplay1"></h2>
+      <canvas id="stockChart1"></canvas>
+    </div>
+
+    <!-- Chart container for displaying financial data -->
+    <div class="chart">
+      <h2 id="companySymbolDisplay"></h2>
+      <canvas id="financialChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Include a JavaScript file for handling income data -->
+  <script src="/js/income.js"></script>
+
+  </div>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="pagination">
+      <!-- Pagination links -->
+      <a href="#">&laquo;</a>
+      <a href="/index">1</a>
+      <a href="/news">2</a>
+      <a href="/asian">3</a>
+      <a href="/sitemap">4</a>
+      <a href="/land">5</a>
+      <a href="/video">6</a>
+      <a href="#">&raquo;</a>
+    </div>
+  </footer>
+
+  <!-- Include a JavaScript file for handling income data (redundant script tag) -->
+  <script src="/js/income.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+/* Define global styles for the entire page */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Style the body of the page */
+body {
+    width: 100vw;
+    /* Set width to the full viewport width */
+    min-height: 100%;
+    /* Ensure a minimum height of the viewport */
+    position: relative;
+    /* Set relative positioning for absolute child elements */
+    padding-bottom: 9rem;
+    /* Add padding at the bottom of the page */
+    box-sizing: inherit;
+    /* Inherit box-sizing from the HTML element */
+    background-color: #13113C;
+    /* Background color */
+    color: white;
+    /* Text color */
+    font-family: 'Lato', sans-serif;
+    /* Font family */
+    margin: 10px;
+    /* Margin around the body */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Arrange content vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    text-align: center;
+    /* Center-align text */
+}
+
+/* Style heading level 1 */
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    /* Add underline decoration */
+}
+
+/* Style anchor links */
+a {
+    color: white;
+    /* Text color for links */
+}
+
+
+/* Style the header */
+/* Style your regular navigation links */
+header {
+    width: 100vw;
+    border: 2px solid white;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13113C;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #13113C;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Style anchor links */
+a {
+    color: white;
+    /* Text color */
+}
+
+/* Style active navigation links */
+.active-link {
+    border: 1px solid yellow;
+    width: fit-content;
+    /* Add border */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+/* Style anchor links on hover and when active */
+li>a:hover,
+a:active {
+    text-decoration: underline;
+ 
+    /* Add underline on hover */
+    color: yellow;
+    /* Text color change to yellow */
+    border: 3px solid white;
+    border-radius: 5px;
+    
+    transition: 400ms;
+    /* Smooth transition effect */
+}
+li>a:hover{
+    width: fit-content;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    /* Center-align text */
+    position: absolute;
+    /* Position at the bottom */
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* Style pagination links */
+.pagination a {
+    color: white;
+    /* Text color */
+    padding: 8px 16px;
+    /* Add padding around links */
+    text-decoration: none;
+    /* Remove default underline */
+    transition: background-color .3s;
+    /* Smooth background color transition */
+}
+
+/* Style the active pagination link */
+.pagination a.active {
+    background-color: black;
+    /* Background color change */
+    color: white;
+    /* Text color change */
+}
+
+/* Style pagination links on hover (excluding active link) */
+.pagination a:hover:not(.active) {
+    background-color: black;
+    /* Background color change on hover */
+}
+
+/* Style the header */
+
+/* Style the main content area */
+main {
+    min-height: calc(100vh - 150px);
+    /* Calculate minimum height based on viewport height */
+    width: 90vw;
+    /* Set width to 90% of the viewport width */
+}
+
+/* Style the dashboard element */
+.dashboard {
+    width: 90vw;
+    /* Set width to 90% of the viewport width */
+    height: 30vh;
+    /* Set height */
+    border: 3px solid white;
+    /* Add border */
+}
+
+/* Style the main content area again */
+main {
+    width: 50vw;
+    /* Set width to 50% of the viewport width */
+}
+
+/* Style containers for stocks and news */
+.stocks,
+.newsContainer {
+    width: 100%;
+    /* Set width to 100% */
+    border: 3px solid white;
+    /* Add border */
+    padding: 10px;
+    /* Add padding */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+}
+
+/* Style the stocks container */
+.stocks {
+    height: 50vh;
+    /* Set height */
+    margin: 10px 0;
+    /* Margin on top and bottom */
+}
+
+/* Style the news container */
+.newsContainer {
+    height: 50vh;
+    /* Set height */
+    margin: 10px 0;
+    /* Margin on top and bottom */
+}
+
+/* Style individual news items */
+.news-item {
+    background-color: #1E1E40;
+    /* Background color */
+    padding: 10px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    margin-bottom: 10px;
+    /* Margin at the bottom of each item */
+}
+
+/* Style the image with class 'one' */
+.brand-title>img {
+    width: 9vw;
+    /* Set width */
+    height: 5vh;
+    /* Set height */
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+/* Add hover effect to the image with class 'one' */
+.brand-title>img:hover {
+    border-radius: 20px;
+    /* Increase border radius on hover */
+    box-shadow: 1px 1px 9px yellow;
+    /* Add shadow on hover */
+    transition: 600ms;
+    /* Smooth transition effect */
+    cursor: pointer;
+    /* Change cursor on hover */
+    border-color: white;
+    /* Change border color on hover */
+}
+
+
+/* Style images */
+img {
+    width: 450px;
+    /* Set a specific width */
+    height: 250px;
+    /* Set a specific height */
+}
+
+/* Style paragraph elements */
+p {
+    margin: 6px 0 4px 0;
+    /* Margin settings */
+}
+
+
+/* Media queries for different screen sizes */
+
+/* Media query for screens with a maximum width of 567px */
+@media (max-width: 567px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+
+    /* Adjust the image with class 'one' for smaller screens */
+    .brand-title>img {
+        width: 9vw;
+        /* Set width */
+        height: auto;
+        /* Auto height to maintain aspect ratio */
+    }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media (max-width: 767px) {
+    header {
+        font-size: 18px;
+        /* Reduce font size */
+    }
+  
+    .brand-title>img {
+        width: 19vw;
+        /* Set width */
+        height: 5vh;
+        /* Adjust height automatically */
+    }
+    main {
+        min-height: calc(100vh - 200px);
+        /* Calculate minimum height */
+    }
+
+    /* Adjust images for smaller screens */
+    img {
+        width: 9vw;
+        /* Set width */
+        height: auto;
+        /* Auto height to maintain aspect ratio */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+/* Media query for screens with a minimum width of 768px and a maximum width of 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        font-size: 20px;
+        /* Increase font size */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+/* Additional media queries for larger screens (adjust as needed) */

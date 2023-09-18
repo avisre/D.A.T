@@ -1,0 +1,415 @@
+/* Define global styles for the entire page */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Font family for the entire page */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    background-color: #13113C;
+    /* Background color */
+    color: white;
+    /* Text color */
+}
+
+/* Style the header */
+header {
+    width: 100vw;
+    /* Set header width to 100% of the viewport width */
+    border: 2px solid white;
+    /* Add border */
+    margin: 0 auto;
+    /* Center horizontally by setting margin */
+    padding: 10px;
+    /* Add padding */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    font-size: 20px;
+    /* Set font size */
+}
+
+
+
+/* Style images */
+img {
+    width: 9vw;
+    /* Set width */
+    height: 5vh;
+    /* Set height */
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+/* Add hover effect to images */
+img:hover {
+    border-radius: 20px;
+    /* Increase border radius on hover */
+    box-shadow: 1px 1px 9px yellow;
+    /* Add shadow on hover */
+    transition: 600ms;
+    /* Smooth transition effect */
+    cursor: pointer;
+    /* Change cursor on hover */
+    border-color: white;
+    /* Change border color on hover */
+}
+
+/* Style the container for sitemap */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    /* Set a minimum height for the container */
+}
+
+/* Style the sitemap content */
+.sitemap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    
+    /* Background color */
+    color: white;
+    /* Text color */
+    border: 2px solid white;
+    /* Add border */
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+}
+
+/* Style section titles in the sitemap */
+.section {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Style sitemap page links */
+.page {
+    font-size: 16px;
+    border: 2px solid white;
+    /* Add border */
+    padding: 5px;
+    /* Add padding */
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+/* Add hover effect to sitemap items */
+.sitemap:hover,
+.page:hover {
+    border-color: aliceblue;
+    /* Change border color on hover */
+    border-radius: 13px;
+    /* Add rounded corners on hover */
+    transition: 500ms;
+    /* Smooth transition effect */
+    box-shadow: 1px 1px 5px yellow;
+    /* Add shadow on hover */
+}
+
+
+/* Style the header */
+/* Style your regular navigation links */
+header {
+    width: 100vw;
+    border: 2px solid white;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13113C;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #13113C;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Style anchor links */
+a {
+    color: white;
+    /* Text color */
+}
+
+/* Style active navigation links */
+.active-link {
+    border: 1px solid yellow;
+    width: fit-content;
+    /* Add border */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+/* Style anchor links on hover and when active */
+li>a:hover,
+a:active {
+    text-decoration: underline;
+ 
+    /* Add underline on hover */
+    color: yellow;
+    /* Text color change to yellow */
+    border: 3px solid white;
+    border-radius: 5px;
+    
+    transition: 400ms;
+    /* Smooth transition effect */
+}
+li>a:hover{
+    width: fit-content;
+}
+
+
+/* Style the footer */
+footer {
+    text-align: center;
+    /* Center-align text */
+    position: absolute;
+    /* Position at the bottom */
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* Style pagination links */
+.pagination a {
+    color: white;
+    /* Text color */
+    padding: 8px 16px;
+    /* Add padding around links */
+    text-decoration: none;
+    /* Remove default underline */
+    transition: background-color .3s;
+    /* Smooth background color transition */
+}
+
+/* Style the active pagination link */
+.pagination a.active {
+    background-color: black;
+    /* Background color change */
+    color: white;
+    /* Text color change */
+}
+
+/* Style pagination links on hover (excluding active link) */
+.pagination a:hover:not(.active) {
+    background-color: black;
+    /* Background color change on hover */
+}
+
+
+/* Media queries for different screen sizes */
+@media (max-width: 500px) {
+
+    /* Adjust styles for smaller screens */
+    body {
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+    }
+
+    /* Modify navigation menu styles for smaller screens */
+    header nav ul {
+        flex-direction: column;
+        /* Arrange items vertically */
+        text-align: center;
+        /* Center-align text */
+    }
+
+    /* Adjust image size for smaller screens */
+    img {
+        width: 9vw;
+        /* Set width */
+        height: 19vh;
+        /* Adjust height automatically */
+    }
+}
+
+@media (max-width: 567px) {
+
+    /* Additional styles for screens with a maximum width of 567px */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    img {
+        width: 19vw;
+        /* Set width */
+        height: 5vh;
+        /* Adjust height automatically */
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    /* Additional styles for screens with a maximum width of 767px */
+    header {
+        font-size: 17px;
+        /* Adjust font size */
+    }
+   
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Additional styles for screens with a width between 768px and 1023px */
+    header {
+        font-size: 18px;
+        /* Adjust font size */
+    }
+    img{
+        width: 19vw;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Additional media queries for larger screens (adjust as needed) */
+@media (min-width: 1024px) {
+
+    /* Additional styles for screens with a minimum width of 1024px */
+    header {
+        font-size: 20px;
+        /* Adjust font size */
+    }
+}
