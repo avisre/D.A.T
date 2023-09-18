@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+
+    <!-- Define the viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the favicon for the website -->
+    <link rel="icon"
+        href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800">
+
+    <!-- Link to an external stylesheet for styling specific to this page -->
+    <link rel="stylesheet" href="/css/asian.css">
+
+    <!-- Preconnect to external font resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Link to an external font family from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Set the title of the webpage -->
+    <title>Asian Stocks Page</title>
+</head>
+
+<header>
+    <!-- Header section containing navigation -->
+
+    <nav class="navbar">
+        <div class="brand-title">  <img src="/assets/logo.png" alt="Logo"></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="/index">Home</a></li>
+            <li > <a href="/api">Stock Fundamentals</a></li>
+            <li> <a  href="/news">Stocks News</a></li>
+            <li> <a class="active-link"href="/asian">Asian Stocks</a></li>
+            <li> <a href="/land">About us</a></li>
+            <li> <a href="/sitemap">Sitemap</a></li>
+            <li> <a  href="/video">Video</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+</header>
+
+<body onload="getDaily();getDaily1();getDaily2()">
+    <!-- Body section with onload functions to fetch data -->
+
+    <main>
+
+        <!-- Section for displaying information about Indian stocks -->
+        <h3>India</h3>
+        <div class="container">
+            <div id="one">Reliance Industries</div>
+            <div id="two">Tata Consultancy services</div>
+            <div id="three">Hdfc Bank</div>
+            <div id="four">Icici Bank</div>
+            <div id="five">Hindustan Unilever Ltd</div>
+        </div>
+
+        <!-- Section for displaying information about Japanese stocks -->
+        <h3>Japan</h3>
+        <div class="container1">
+            <div id="eleven">Toyota</div>
+            <div id="twelve">Sony</div>
+            <div id="thirteen">Keyence</div>
+            <div id="fourteen">NTT</div>
+            <div id="fifteen">Mitsubishi UFJ Financial</div>
+        </div>
+
+        <!-- Section for displaying information about Chinese stocks -->
+        <h3>China</h3>
+        <div class="container1">
+            <div id="six">Tencent</div>
+            <div id="seven">Kweichow Moutai</div>
+            <div id="eight">Alibaba</div>
+            <div id="nine">ICBC</div>
+            <div id="ten">Petrochina</div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer section with pagination links -->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="/index">1</a>
+            <a href="/api">2</a>
+            <a href="/news">3</a>
+            <a href="/sitemap">4</a>
+            <a href="/land">5</a>
+            <a href="/video">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </footer>
+
+    <!-- Include a JavaScript file for handling Asian stock data -->
+    <script src="/js/asian.js"></script>
+</body>
+
+</html>

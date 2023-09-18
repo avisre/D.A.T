@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+
+    <!-- Define the viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the favicon for the website -->
+    <link rel="icon"
+        href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800">
+
+    <!-- Preconnect to external font resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Link to an external font family from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Link to an external stylesheet for styling specific to this page -->
+    <link rel="stylesheet" href="/css/video.css">
+
+    <!-- Set the title of the Video page -->
+    <title>Navigation videos</title>
+</head>
+
+<header>
+    <!-- Header section containing navigation -->
+   
+      <!-- Navigation menu -->
+      <nav class="navbar">
+        <div class="brand-title">  <img src="/assets/logo.png" alt="Logo"></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="/index">Home</a></li>
+            <li > <a href="/api">Stock Fundamentals</a></li>
+            <li> <a href="/news">Stocks News</a></li>
+            <li> <a href="/asian">Asian Stocks</a></li>
+            <li> <a href="/land">About us</a></li>
+            <li> <a href="/sitemap">Sitemap</a></li>
+            <li> <a class="active-link" href="/video">Video</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+</header>
+
+<body>
+    <main>
+        <!-- Main content section -->
+        <h1>Videos to navigate the website</h1>
+        <section>
+            <!-- Section for video demonstrations -->
+
+            <!-- Subsection for "Login and dashboard" video -->
+            <div>
+                <h2>Login and dashboard.</h2>
+                <!-- Video player with controls for size and volume -->
+                <video controls>
+                    <!-- Source file for the video -->
+                    <source src="assets/login and dashboard (1).mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Subsection for "Stock Research" video -->
+            <div>
+                <h2>Stock Research.</h2>
+                <!-- Video player with controls for size and volume -->
+                <video controls>
+                    <!-- Source file for the video -->
+                    <source src="assets/fundamentals.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Subsection for "News and other pages" video -->
+            <div>
+                <h2>News and other pages.</h2>
+                <!-- Video player with controls for size and volume -->
+                <video controls>
+                    <!-- Source file for the video -->
+                    <source src="assets/news.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer section with pagination links -->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="/index">1</a>
+            <a href="/api">2</a>
+            <a href="/news">3</a>
+            <a href="/asian">4</a>
+            <a href="/sitemap">5</a>
+            <a href="/land">6</a>
+
+            <a href="#">&raquo;</a>
+        </div>
+    </footer>
+    <script src="/js/video.js"></script>
+</body>
+
+</html>

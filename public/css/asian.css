@@ -1,0 +1,385 @@
+/* Reset default styles and set box-sizing to border-box for all elements */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Styles for the entire page body */
+body {
+    width: 100vw;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    /* Add some padding to the bottom of the body to prevent content from getting cut off */
+    padding-bottom: 5rem;
+    box-sizing: inherit;
+    background-color: #13113C;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* Styles for images throughout the page */
+img {
+    width: 9vw;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+img:hover {
+    border-radius: 20px;
+    /* Increase border radius on hover */
+    box-shadow: 1px 1px 9px yellow;
+    /* Add shadow on hover */
+    transition: 600ms;
+    /* Smooth transition effect */
+    cursor: pointer;
+    /* Change cursor on hover */
+    border-color: white;
+    /* Change border color on hover */
+}
+
+/* Style for the active navigation link */
+ .active-link {
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
+/* Link styles */
+a {
+    color: white;
+}
+
+/* Link hover styles */
+a:hover,
+a:active {
+    text-decoration: underline;
+    color: yellow;
+    transition: 600ms;
+}
+
+/* Container styles for sections */
+.container,
+.container1 {
+    width: 90vw;
+    height: 40vh;
+    border: 4px solid #B3CDD1;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+/* Styles for individual divs within containers */
+.container div,
+.container1 div {
+    width: 12vw;
+    height: 15vh;
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.9rem;
+    margin: 0 20px 0 20px;
+    padding: 2px;
+    text-align: center;
+}
+
+
+
+
+/* Styles for h2 elements */
+h3 {
+ text-decoration: underline;
+    color: white;
+    padding: 4px;
+   
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+/* Additional reset styles for list and div elements */
+div,
+li {
+    list-style: none;
+}
+
+/* Hover effect for sections and div elements */
+section,
+div:hover {
+    border-color: aliceblue;
+    border-radius: 23px;
+    transition: 500ms;
+}
+
+/* Pagination link styles */
+
+/* Style the active pagination link */
+header {
+    width: 100vw;
+    border: 2px solid white;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13113C;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #13113C;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2px 0 2px 0;
+    padding: 1px;
+    
+}
+
+/* Style anchor links */
+a {
+    color: white;
+    /* Text color */
+}
+
+/* Style active navigation links */
+.active-link {
+    border: 1px solid yellow;
+    width: fit-content;
+    /* Add border */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+/* Style anchor links on hover and when active */
+li>a:hover,
+a:active {
+    text-decoration: underline;
+ 
+    /* Add underline on hover */
+    color: yellow;
+    /* Text color change to yellow */
+    border: 3px solid white;
+    border-radius: 5px;
+    
+    transition: 400ms;
+    /* Smooth transition effect */
+}
+li>a:hover{
+    width: fit-content;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    /* Center-align text */
+    position: absolute;
+    /* Position at the bottom */
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* Style pagination links */
+.pagination a {
+    color: white;
+    /* Text color */
+    padding: 8px 16px;
+    /* Add padding around links */
+    text-decoration: none;
+    /* Remove default underline */
+    transition: background-color .3s;
+    /* Smooth background color transition */
+}
+
+/* Style the active pagination link */
+.pagination a.active {
+    background-color: black;
+    /* Background color change */
+    color: white;
+    /* Text color change */
+}
+
+/* Style pagination links on hover (excluding active link) */
+.pagination a:hover:not(.active) {
+    background-color: black;
+    /* Background color change on hover */
+}
+
+
+/* Media query for screensbetween 350px and  768px */
+@media (min-width:350px)and (max-width: 768px) {
+    body {
+        /* Adjust the padding for smaller screens */
+        padding-bottom: 3rem;
+    }
+
+    /* Stack navigation items vertically */
+    
+    .brand-title>img {
+        width: 19vw;
+        /* Set width */
+        height: 5vh;
+        /* Adjust height automatically */
+    }
+    /* Adjust image size for smaller screens */
+    img {
+        width: 9vw;
+        height: auto;
+    }
+
+    /* Header styles for smaller screens */
+    header {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Container styles for smaller screens */
+    .container,
+    .container1 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    /* Styles for individual divs within containers on smaller screens */
+    .container div,
+    .container1 div {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    /* Reset footer position for smaller screens */
+  
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+/* Media query for screens smaller than 986px */
+@media (max-width: 986px) {
+
+    /* Stack navigation items vertically */
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}

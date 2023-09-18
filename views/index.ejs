@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> <!-- Declares the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Defines the viewport settings for responsive design -->
+
+    <link rel="icon"
+        href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+    <!-- Sets the website's favicon -->
+    <!-- Include chart library (e.g., Chart.js) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to Google Fonts server -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnects to Google Fonts server with CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Loads the 'Inter' font from Google Fonts -->
+    <link rel="stylesheet" href="/css/dashboard.css"> <!-- Links to an external CSS stylesheet -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Includes the Chart.js library -->
+
+    <title>Digital Asset Tracker</title> <!-- Sets the title of the web page -->
+</head>
+
+<body>
+    <header>
+         
+        <nav class="navbar">
+            <div class="brand-title">  <img src="/assets/logo.png" alt="Logo"></div>
+            <a href="#" class="toggle-button">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+              <ul>
+                <li><a class="active-link"href="/index">Stock Dashboard</a></li>
+                <li > <a href="/api">Stock Fundamentals</a></li>
+                <li> <a  href="/news">Stocks News</a></li>
+                <li> <a href="/asian">Asian Stocks</a></li>
+                <li> <a href="/land">About us</a></li>
+                <li> <a href="/sitemap">Sitemap</a></li>
+                <li> <a  href="/video">Video</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <h1>Stock Dashboard</h1> <!-- Displays the main heading -->
+
+        <section class="one">
+            <div class="content-section">
+                <h2>Add Stock</h2> <!-- Displays the heading for adding a stock -->
+                <div class="ch">
+                    <canvas id="pieChartCanvas"></canvas> <!-- Creates a canvas for displaying a pie chart -->
+                </div>
+                <div class="container2">
+                    <form id="addStockForm" action="/addStock" method="post"> <!-- Creates a form for adding a stock -->
+                        <label for="symbol" class="add-stock-form">Symbol:</label> <!-- Label for stock symbol input -->
+                        <input type="text" id="symbol" name="symbol" placeholder="For eg'AAPL'" autocomplete="off"
+                            required>
+                        <!-- Input field for stock symbol -->
+
+                        <ul id="suggestions"></ul> <!-- List to display stock symbol suggestions -->
+
+                        <label for="qty" class="space-top">Quantity:</label> <!-- Label for quantity input -->
+                        <input type="number" id="qty" name="qty" placeholder="Number of stocks to add" required>
+                        <!-- Input field for quantity -->
+                        <button type="submit" class="space-top" id="btn">Add Stock</button>
+                        <!-- Submit button for adding a stock -->
+                    </form>
+                    <div class="question-mark">&#9432;</div> <!-- Displays a question mark icon -->
+                    <div class="explanation">
+                        <p>This is where you can enter the stock symbol and quantity. The stock symbol represents the
+                            unique code for a particular stock, and the quantity is the number of shares you want to
+                            add. Once you have clicked on the add button, the stock and its price will be displayed on
+                            the dashboard below.</p> <!-- Explanation text -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="two">
+            <div class="table-section">
+                <h2>My Stocks</h2> <!-- Displays the heading for the user's stocks -->
+                <table> <!-- Creates a table for displaying stock data -->
+                    <tr>
+                        <th>Symbol</th> <!-- Table header for stock symbol -->
+                        <th>Quantity</th> <!-- Table header for stock quantity -->
+                        <th>Stock Value</th> <!-- Table header for stock value -->
+                        <th>Delete</th> <!-- Table header for the delete button -->
+                    </tr>
+                    <!--  made with knowledge gained from ejs.co. (2011.). EJS -- Embedded JavaScript templates. [online] Available at: https://ejs.co/#docs. (Accessed: 26 August 2023).  -->
+                    <% let totalPortfolioValue=0; %> <!-- Initializes a variable for total portfolio value -->
+                        <% stocks.forEach(stock=> { %> <!-- Loops through user's stocks -->
+                            <tr>
+                                <td>
+                                    <%= stock.symbol.toUpperCase() %>
+                                </td> <!-- Displays the stock symbol in uppercase -->
+                                <td>
+                                    <%= stock.qty %>
+                                </td> <!-- Displays the stock quantity -->
+                                <td>
+                                    <%= (stock.qty * stock.symbolValue).toFixed(2) %>
+                                </td> <!-- Calculates and displays the stock value -->
+                                <td>
+                                    <form action="/deleteStock" method="post">
+                                        <!-- Creates a form for deleting a stock -->
+                                        <input type="hidden" name="id" value="<%= stock._id %>">
+                                        <!-- Hidden input for the stock ID -->
+                                        <button type="submit">Delete</button> <!-- Delete button to remove the stock -->
+                                    </form>
+                                </td>
+                            </tr>
+                            <% totalPortfolioValue +=stock.qty * stock.symbolValue; %>
+                                <!-- Calculates the total portfolio value -->
+                                <% }); %>
+                                    <h3>Total Portfolio Value: &#36; <%= totalPortfolioValue.toFixed(2) %>
+                                    </h3> <!-- Displays the total portfolio value -->
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="pagination">
+            <a href="#">&laquo;</a> <!-- Link to previous page -->
+            <a href="/api">1</a> <!-- Link to page 1 -->
+            <a href="/news">2</a> <!-- Link to page 2 -->
+            <a href="/asian">3</a> <!-- Link to page 3 -->
+            <a href="/sitemap">4</a> <!-- Link to page 4 -->
+            <a href="/land">5</a> <!-- Link to page 5 -->
+            <a href="/video">6</a> <!-- Link to page 6 -->
+            <a href="#">&raquo;</a> <!-- Link to next page -->
+        </div>
+    </footer>
+
+    <script>
+
+        // Function to update the pie chart based on the user's stock data
+        async function updatePieChart() {
+            // Select all rows in the table except the header
+            const rows = document.querySelectorAll('table tr:not(:first-child)');
+            const labels = []; // Array to store labels for the pie chart
+            const data = []; // Array to store data for the pie chart
+
+            // Iterate through each row in the table
+            rows.forEach(row => {
+                const symbol = row.cells[0].textContent; // Get the stock symbol from the first cell
+                const qty = parseFloat(row.cells[1].textContent); // Get the quantity from the second cell
+
+                labels.push(symbol); // Add the symbol to the labels array
+                data.push(qty); // Add the quantity to the data array
+            });
+
+            // Get the canvas element to draw the pie chart
+            const ctx = document.getElementById('pieChartCanvas').getContext('2d');
+            // Create a new pie chart using Chart.js
+            const pieChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(153, 102, 255, 0.6)',
+                        ],
+                    }],
+                },
+            });
+        }
+
+        // Call the function to generate the initial pie chart when the page loads
+        updatePieChart();
+
+        // Function to display a prompt when a user adds a new stock entry
+        function showAddedStockPrompt() {
+            alert(`${symbol.value.toUpperCase()} stock was added to your dashboard!`);
+        }
+
+        // Stock search functionality using Alpha Vantage API
+        const apiKey = '6VWT72JNHHLBF3MH';
+        const userInput = document.getElementById('symbol');
+        const suggestionsList = document.getElementById('suggestions');
+
+        // Function to fetch stock symbol suggestions from Alpha Vantage
+        async function fetchSuggestions(keyword) {
+            const apiUrl = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${keyword}&apikey=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.bestMatches) {
+                    return data.bestMatches.slice(0, 2); // Limit to the first 2 suggestions
+                }
+            } catch (error) {
+                console.error(error);
+            }
+
+            return [];
+        }
+
+        // Event listener for user input to fetch and display stock symbol suggestions
+        userInput.addEventListener('input', async () => {
+            const inputText = userInput.value.trim();
+            suggestionsList.innerHTML = '';
+
+            if (inputText.length >= 2) {
+                const suggestions = await fetchSuggestions(inputText);
+                // waiitng for userInput
+                suggestions.slice(0, 3).forEach((suggestion) => {
+                    // Create list items for each suggestion and add click event listeners
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${suggestion['1. symbol']} - ${suggestion['2. name']}`;
+                    // extracts symbol and name from data object form alphavantage api
+                    listItem.addEventListener('click', () => {
+                        // click event triggers the addition of the symbol to the input field
+                        userInput.value = suggestion['1. symbol']; // Fill the input with the selected symbol
+                        suggestionsList.innerHTML = ''; // Clear the suggestion list
+                    });
+                    suggestionsList.appendChild(listItem); // Add the list item to the suggestion list
+                });
+            }
+        });
+        // Function to open and close nabar dynamically using mouseclick
+        const buttonToggle=document.getElementsByClassName('toggle-button')[0] 
+const linkNavbar=document.getElementsByClassName('navbar-links')[0]
+
+buttonToggle.addEventListener('click',()=>{
+   linkNavbar.classList.toggle('active');
+})
+
+    </script>
+</body>
+
+</html>

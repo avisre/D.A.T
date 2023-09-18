@@ -1,0 +1,400 @@
+/* Set some global styles for the entire HTML document */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Style the body of the webpage */
+body {
+    width: 100vw;
+    /* Full width of the viewport */
+    min-height: 100%;
+    /* Ensure the body covers at least the viewport height */
+    position: relative;
+    /* Set the position to relative for absolute positioning within */
+    margin: 0;
+    /* Remove default margin */
+    padding-bottom: 5rem;
+    /* Add padding at the bottom */
+    box-sizing: inherit;
+    /* Inherit box-sizing from the HTML element */
+    background-color: #13113C;
+    /* Set background color */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    flex-wrap: wrap;
+    /* Wrap flex items if they overflow */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    color: white;
+    /* Text color */
+    text-align: center;
+    /* Center text within */
+    font-family: 'Inter', sans-serif;
+    /* Set font family */
+    font-size: 15px;
+    /* Base font size */
+}
+
+/* Style images */
+.brand-title>img {
+    width: 9vw;
+    /* Relative width based on viewport width */
+    height: 5vh;
+    /* Relative height based on viewport height */
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+/* Style paragraphs */
+p {
+    font-size: 20px;
+    /* Set font size for paragraphs */
+}
+
+/* Style specific image with class 'img' */
+.img1 {
+    width: 50vw;
+    /* Relative width based on viewport width */
+    height: 50vh;
+    /* Relative height based on viewport height */
+}
+
+/* Style headings */
+h2,
+h1 {
+    text-decoration: underline;
+    /* Add underline to headings */
+    padding: 5px;
+    /* Add padding around headings */
+}
+
+/* Style the main content section */
+.content {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    text-align: start;
+    /* Left-align text */
+}
+
+/* Style a container within the content */
+.content-box {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center horizontally */
+    flex: 1;
+    /* Grow to fill available space */
+    max-width: 100%;
+    /* Limit maximum width to 100% */
+}
+
+/* Style the header element */
+
+
+/* Style a section element */
+section {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: row;
+    /* Arrange items horizontally */
+    margin: 20px;
+    /* Margin around the section */
+}
+
+
+/* Style list items */
+
+
+
+/* Style the active link within a menu */
+.active-link {
+    border: 1px solid yellow;
+    /* Add a border with yellow color */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+/* Style anchor links on hover and active states */
+
+
+
+/* Remove list bullets and default list padding for div and li elements */
+div,
+li {
+    list-style: none;
+}
+
+/* Add hover effect to headings and sections */
+h1:hover,
+h2:hover,
+section:hover {
+    border-color: aliceblue;
+    /* Change border color on hover */
+    border-radius: 23px;
+    /* Add rounded corners on hover */
+    transition: 500ms;
+    /* Smooth transition effect */
+    box-shadow: 1px 1px 5px yellow;
+    /* Add shadow on hover */
+}
+
+/* Style pagination links */
+
+
+/* Style the active pagination link */
+header {
+    width: 100vw;
+    border: 2px solid white;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13113C;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #13113C;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Style anchor links */
+a {
+    color: white;
+    /* Text color */
+}
+
+/* Style active navigation links */
+.active-link {
+    border: 1px solid yellow;
+    width: fit-content;
+    /* Add border */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+/* Style anchor links on hover and when active */
+li>a:hover,
+a:active {
+    text-decoration: underline;
+ 
+    /* Add underline on hover */
+    color: yellow;
+    /* Text color change to yellow */
+    border: 3px solid white;
+    border-radius: 5px;
+    
+    transition: 400ms;
+    /* Smooth transition effect */
+}
+li>a:hover{
+    width: fit-content;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    /* Center-align text */
+    position: absolute;
+    /* Position at the bottom */
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* Style pagination links */
+.pagination a {
+    color: white;
+    /* Text color */
+    padding: 8px 16px;
+    /* Add padding around links */
+    text-decoration: none;
+    /* Remove default underline */
+    transition: background-color .3s;
+    /* Smooth background color transition */
+}
+
+/* Style the active pagination link */
+.pagination a.active {
+    background-color: black;
+    /* Background color change */
+    color: white;
+    /* Text color change */
+}
+
+/* Style pagination links on hover (excluding active link) */
+.pagination a:hover:not(.active) {
+    background-color: black;
+    /* Background color change on hover */
+}
+
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 968px) {
+    body {
+        padding-bottom: 3rem;
+        /* Reduce padding at the bottom */
+    }
+
+    .img1 {
+        height: 30%;
+    }
+
+
+    h1 {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+    }
+
+    section {
+        flex-direction: column;
+        /* Stack section content vertically */
+    }
+
+   
+    p {
+        font-size: 12px;
+        /* Adjust font size for paragraphs */
+    }
+
+    .brand-title>img {
+        width: 9vw;
+        /* Adjust image width */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    header {
+        width: 100%;
+        /* Set header width to 100% */
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+
+    /* Adjust layout for container elements */
+    .container,
+    .container1 {
+        width: 100%;
+        /* Set width to 100% */
+        height: auto;
+        /* Adjust height for smaller screens */
+        flex-direction: column;
+        /* Stack container content vertically */
+    }
+
+    /* Adjust layout for child elements within containers */
+    .container div,
+    .container1 div {
+        width: 80%;
+        /* Set width to 80% */
+        height: auto;
+        /* Adjust height for smaller screens */
+        margin: 10px auto;
+        /* Add margin to center content */
+    }
+
+    footer {
+        position: static;
+        /* Remove absolute positioning */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: left;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+   .brand-title>img {
+        width: 19vw;
+        /* Set width */
+        height: 5vh;
+        /* Adjust height automatically */
+    }
+}

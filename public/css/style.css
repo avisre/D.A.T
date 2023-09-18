@@ -1,0 +1,426 @@
+    body {
+        width: 100vw;
+        height: auto;
+        background-color: #13113C;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    img {
+        width: 9vw;
+        height: 5vh;
+        border-radius: 10px;
+    }
+
+    img:hover {
+        border-radius: 20px;
+        box-shadow: 1px 1px 9px yellow;
+        transition: 600ms;
+        cursor: pointer;
+        border-color: white;
+    }
+    .chart {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .question-mark {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .explanation {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 200px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .question-mark:hover+.explanation {
+        display: block;
+    }
+
+    h1 {
+        text-align: center;
+
+    }
+
+    div {
+        margin: 10px 0;
+    }
+
+    label {
+        margin-right: 10px;
+    }
+
+    .search {
+        width: 50vw;
+        margin-left: 80px;
+    }
+
+    .chartContainer,
+    .chart1,
+    .chart {
+
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 500px;
+        height: 300px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: 80px;
+
+
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip-text {
+        visibility: hidden;
+
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        width: 200px;
+        background-color: #fff;
+        color: black;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    #suggestions {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        background-color: white;
+
+
+        max-height: 7 0px;
+        overflow-y: auto;
+        width: 30%;
+        z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #suggestions li {
+        padding: 8px;
+        cursor: pointer;
+        color: black;
+    }
+
+    #suggestions li:hover {
+        background-color: #f0f0f0;
+    }
+
+    button {
+
+        color: white;
+        border: 2px solid aliceblue;
+        border: ite;
+        background-color: #13113C;
+        border-radius: 5px;
+    }
+
+    button:hover,
+    button:active {
+
+        color: yellow;
+        transition: 600ms;
+    }
+
+
+
+    button:hover {
+        transition: 600ms;
+        border-radius: 10px;
+    }
+
+/* Style the active pagination link */
+header {
+    width: 100vw;
+    border: 2px solid white;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13113C;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #13113C;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Style anchor links */
+a {
+    color: white;
+    /* Text color */
+}
+
+/* Style active navigation links */
+.active-link {
+    border: 1px solid yellow;
+    width: fit-content;
+    /* Add border */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+/* Style anchor links on hover and when active */
+li>a:hover,
+a:active {
+    text-decoration: underline;
+ 
+    /* Add underline on hover */
+    color: yellow;
+    /* Text color change to yellow */
+    border: 3px solid white;
+    border-radius: 5px;
+    
+    transition: 400ms;
+    /* Smooth transition effect */
+}
+li>a:hover{
+    width: fit-content;
+}
+
+
+/* Style pagination links */
+.pagination a {
+    color: white;
+    /* Text color */
+    padding: 8px 16px;
+    /* Add padding around links */
+    text-decoration: none;
+    /* Remove default underline */
+    transition: background-color .3s;
+    /* Smooth background color transition */
+}
+
+/* Style the active pagination link */
+.pagination a.active {
+    background-color: black;
+    /* Background color change */
+    color: white;
+    /* Text color change */
+}
+
+/* Style pagination links on hover (excluding active link) */
+.pagination a:hover:not(.active) {
+    background-color: black;
+    /* Background color change on hover */
+}
+
+
+
+    /* Styles for smaller screens like tablets (e.g., iPad) */
+    @media (max-width: 986px) {
+        body {
+            font-size: 16px;
+            /* Adjust the font size for readability on smaller screens */
+        }
+
+       
+
+        .searchBar {
+            flex-direction: column;
+            /* Stack elements vertically on smaller screens */
+            text-align: center;
+            /* Center-align text */
+        }
+
+        .search {
+            margin-left: 0;
+            /* Remove left margin */
+        }
+
+        .chartContainer,
+        .chart1,
+        .chart {
+            width: 90%;
+            /* Make charts take up 90% of the screen width */
+            margin: 30px auto;
+            /* Center-align charts and add some space */
+        }
+
+        .pagination {
+            margin-right: 0;
+            /* Remove right margin for pagination */
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .toggle-button {
+            display: flex;
+        }
+    
+        .navbar-links {
+            display: none;
+            width: 100%;
+        }
+    
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+        }
+    
+        .navbar-links ul li {
+            text-align: left;
+        }
+    
+        .navbar-links ul li a {
+            padding: .5rem 1rem;
+        }
+    
+        .navbar-links.active {
+            display: flex;
+        }
+    }
+
+    /* Styles for even smaller screens like smartphones */
+    @media (max-width: 480px) {
+        body {
+            font-size: 14px;
+            /* Further reduce font size for smartphones */
+        }
+
+
+          
+    .brand-title>img {
+        width: 19vw;
+        /* Set width */
+        height: 5vh;
+        /* Adjust height automatically */
+    }
+     
+
+        .search {
+            width: 90%;
+            /* Make the search input take up 90% of the screen width */
+            margin: 10px auto;
+            /* Center-align the search input and add some space */
+        }
+
+        .chartContainer,
+        .chart1,
+        .chart {
+            width: 95%;
+            /* Make charts take up 95% of the screen width */
+            margin: 10px auto;
+            /* Center-align charts and add some space */
+        }
+
+        .pagination {
+            margin-right: 0;
+            /* Remove right margin for pagination */
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .toggle-button {
+            display: flex;
+        }
+    
+        .navbar-links {
+            display: none;
+            width: 100%;
+        }
+    
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+        }
+    
+        .navbar-links ul li {
+            text-align: left;
+        }
+    
+        .navbar-links ul li a {
+            padding: .5rem 1rem;
+        }
+    
+        .navbar-links.active {
+            display: flex;
+        }
+    }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+
+    <!-- Define the viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the favicon for the website -->
+    <link rel="icon"
+        href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800">
+
+    <!-- Preconnect to external font resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Link to an external font family from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Link to an external stylesheet for styling specific to this page -->
+    <link rel="stylesheet" href="/css/news.css">
+
+    <!-- Set the title of the webpage -->
+    <title>Stock Dashboard</title>
+</head>
+
+<body onload="getStockMarketNews()">
+    <!-- Body section with onload function to fetch stock market news -->
+
+    <header>
+        <!-- Header section containing navigation -->
+
+       
+        <nav class="navbar">
+            <div class="brand-title">  <img src="/assets/logo.png" alt="Logo"></div>
+            <a href="#" class="toggle-button">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+              <ul>
+                <li><a href="/index">Home</a></li>
+                <li > <a href="/api">Stock Fundamentals</a></li>
+                <li> <a class="active-link" href="/news">Stocks News</a></li>
+                <li> <a href="/asian">Asian Stocks</a></li>
+                <li> <a href="/land">About us</a></li>
+                <li> <a href="/sitemap">Sitemap</a></li>
+                <li> <a  href="/video">Video</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <!-- Main content section -->
+
+        <div class="news">
+            <!-- Section for displaying the latest stock news -->
+
+            <!-- Heading for the latest stock news -->
+            <h1>Latest Stock News</h1>
+
+            <!-- Container for displaying the news content fetched using JavaScript -->
+            <div id="news-container"></div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer section with pagination links -->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="/index">1</a>
+            <a href="/api">2</a>
+            <a href="/asian">3</a>
+            <a href="/sitemap">4</a>
+            <a href="/land">5</a>
+            <a href="/video">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </footer>
+
+    <!-- Include a JavaScript file for fetching and displaying stock market news -->
+    <script src="/js/news.js"></script>
+</body>
+
+</html>
