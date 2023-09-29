@@ -163,13 +163,10 @@ a:active {
     color: yellow;
     /* Set the color for links on hover and when active to yellow */
 }
+a:link {
+  color: white;
 
-a{
-    color:white!important;
-    
 }
-
-
 
 
 
