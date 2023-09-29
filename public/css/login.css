@@ -1,426 +1,190 @@
-    body {
-        width: 100vw;
-        height: auto;
-        background-color: #13113C;
-        color: white;
-        font-family: 'Inter', sans-serif;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-
-    }
-
-    img {
-        width: 9vw;
-        height: 5vh;
-        border-radius: 10px;
-    }
-
-    img:hover {
-        border-radius: 20px;
-        box-shadow: 1px 1px 9px yellow;
-        transition: 600ms;
-        cursor: pointer;
-        border-color: white;
-    }
-    .chart {
-        width: 80vw;
-        height: 80vh;
-    }
-
-    .question-mark {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 14px;
-        cursor: pointer;
-    }
-
-    .explanation {
-        display: none;
-        position: absolute;
-        top: 30px;
-        right: 0;
-        width: 200px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1;
-    }
-
-    .question-mark:hover+.explanation {
-        display: block;
-    }
-
-    h1 {
-        text-align: center;
-
-    }
-
-    div {
-        margin: 10px 0;
-    }
-
-    label {
-        margin-right: 10px;
-    }
-
-    .search {
-        width: 50vw;
-        margin-left: 80px;
-    }
-
-    .chartContainer,
-    .chart1,
-    .chart {
-
-        background-color: white;
-        border: 1px solid #ccc;
-        width: 500px;
-        height: 300px;
-        border-radius: 5px;
-        margin-top: 20px;
-        margin-left: 80px;
-
-
-    }
-
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .tooltip-text {
-        visibility: hidden;
-
-        position: absolute;
-        top: 30px;
-        right: 10px;
-        width: 200px;
-        background-color: #fff;
-        color: black;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .tooltip:hover .tooltip-text {
-        visibility: visible;
-        opacity: 1;
-    }
-
-
-    #suggestions {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        background-color: white;
-
-
-        max-height: 7 0px;
-        overflow-y: auto;
-        width: 30%;
-        z-index: 1;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    #suggestions li {
-        padding: 8px;
-        cursor: pointer;
-        color: black;
-    }
-
-    #suggestions li:hover {
-        background-color: #f0f0f0;
-    }
-
-    button {
-
-        color: white;
-        border: 2px solid aliceblue;
-        border: ite;
-        background-color: #13113C;
-        border-radius: 5px;
-    }
-
-    button:hover,
-    button:active {
-
-        color: yellow;
-        transition: 600ms;
-    }
-
-
-
-    button:hover {
-        transition: 600ms;
-        border-radius: 10px;
-    }
-
-/* Style the active pagination link */
-header {
+body {
     width: 100vw;
-    border: 2px solid white;
-    margin: 0 0 10px 0;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 20px;
-}
-  .navbar {
+    /* Set the width of the body to 100% of the viewport width */
+    height: 100vh;
+    /* Set the height of the body to 100% of the viewport height */
+    background-color: black;
+    /* Set the background color of the body to black */
     display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #13113C;
-    color: white;
-}
-
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
-.navbar-links {
-    height: 100%;
-}
-
-.navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links li {
-    list-style: none;
-}
-
-.navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-}
-
-.navbar-links li:hover {
-    background-color: #13113C;
-}
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
+    /* Use flexbox for layout */
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    /* Arrange child elements vertically */
+    align-items: center;
+    /* Center child elements horizontally */
+
+    font-family: 'Roboto', sans-serif;
+    /* Set the font family for text content */
+    background-image: url('https://images.pexels.com/photos/8721318/pexels-photo-8721318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    /* Set the background image */
+    background-position: center;
+    /* Center the background image */
+    background-size: cover;
+    /* Scale the background image to cover the entire container */
+    background-repeat: no-repeat;
+    /* Prevent background image from repeating */
+    color: white;
+    /* Set the text color to white */
 }
 
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
+
+header {
+    display: flex;
+    /* Use flexbox for layout within the header */
+    flex-direction: column;
+    /* Arrange child elements vertically */
+    justify-content: flex-start;
+    /* Align child elements at the top of the header */
+    align-items: center;
+    /* Center child elements horizontally */
+    padding: 20px 0;
+    /* Add padding to the header (20px top and bottom, 0px left and right) */
+    margin-bottom: 20px;
+    /* Add margin at the bottom of the header */
+}
+
+
+
+img {
+    width: 20vw;
+    /* Set the width of images to 20% of the viewport width */
+    height: 13vh;
+    /* Set the height of images to 13% of the viewport height */
     border-radius: 10px;
+    /* Add rounded corners to images */
 }
 
-/* Style anchor links */
-a {
-    color: white;
-    /* Text color */
-}
-
-/* Style active navigation links */
-.active-link {
-    border: 1px solid yellow;
-    width: fit-content;
-    /* Add border */
-    border-radius: 5px;
-    /* Add rounded corners */
-}
-
-/* Style anchor links on hover and when active */
-li>a:hover,
-a:active {
-    text-decoration: underline;
- 
-    /* Add underline on hover */
-    color: yellow;
-    /* Text color change to yellow */
+section {
+    width: 80%;
+    /* Set the width of the section to 80% of its container */
+    max-width: 400px;
+    /* Set a maximum width for the section (adjust as needed) */
+    display: flex;
+    /* Use flexbox for layout within the section */
+    flex-direction: column;
+    /* Arrange child elements vertically */
+    align-items: center;
+    /* Center child elements horizontally */
     border: 3px solid white;
-    border-radius: 5px;
-    
-    transition: 400ms;
-    /* Smooth transition effect */
-}
-li>a:hover{
-    width: fit-content;
+    /* Add a white border with a 3px width */
+    border-radius: 6px;
+    /* Add rounded corners to the section */
+    backdrop-filter: blur(10px);
+    /* Apply a blur filter to create a frosted glass effect */
+    padding: 20px;
+    /* Add padding to the section */
 }
 
+form {
+    width: 100%;
+    /* Set the width of the form to 100% */
+}
 
-/* Style pagination links */
-.pagination a {
+label {
+    display: block;
+    /* Display labels as blocks */
+    margin-bottom: 5px;
+    /* Add margin at the bottom of labels */
     color: white;
-    /* Text color */
-    padding: 8px 16px;
-    /* Add padding around links */
-    text-decoration: none;
-    /* Remove default underline */
-    transition: background-color .3s;
-    /* Smooth background color transition */
+    /* Set the text color of labels to white */
 }
 
-/* Style the active pagination link */
-.pagination a.active {
-    background-color: black;
-    /* Background color change */
+input {
+    width: 90%;
+    /* Set the width of input fields to 90% */
+    padding: 8px;
+    /* Add padding to input fields */
+    margin-bottom: 10px;
+    /* Add margin at the bottom of input fields */
+    border: 1px solid white;
+    /* Add a white border with a 1px width to input fields */
+    border-radius: 4px;
+    /* Add rounded corners to input fields */
+    background-color: transparent;
+    /* Set the background of input fields to transparent */
     color: white;
-    /* Text color change */
+    /* Set the text color of input fields to white */
 }
 
-/* Style pagination links on hover (excluding active link) */
-.pagination a:hover:not(.active) {
-    background-color: black;
-    /* Background color change on hover */
+input:focus {
+    background-color: white;
+    /* Change the background color of input fields when focused */
+    color: black;
+    /* Change the text color of input fields when focused */
+}
+
+button {
+    margin: 10px 0;
+    /* Add margin (10px top and bottom, 0px left and right) to buttons */
+    font-family: 'Roboto', sans-serif;
+    /* Set the font family for buttons */
+    border: 3px solid white;
+    /* Add a white border with a 3px width to buttons */
+    padding: 5px 15px;
+    /* Add padding to buttons (5px top and bottom, 15px left and right) */
+    width: inherit;
+    /* Set the width of buttons to inherit from their container */
+
+    background-color: transparent;
+    /* Set the background color of buttons to transparent */
+    color: white;
+    /* Set the text color of buttons to white */
+    cursor: pointer;
+    /* Change the cursor to a pointer on hover */
+}
+
+
+.btn {
+    text-align: center;
+    /* Center align text within elements with the class 'btn' */
+}
+
+
+img:hover,
+section:hover,
+button:hover {
+    border-radius: 20px;
+    /* Add rounded corners on hover */
+    box-shadow: 1px 1px 9px yellow;
+    /* Add a yellow box shadow on hover */
+    transition: 600ms;
+    /* Apply a 600ms transition effect on hover */
+    cursor: pointer;
+    /* Change the cursor to a pointer on hover */
+    border-color: white;
+    /* Change the border color to white on hover */
+}
+
+
+a:visited {
+    color: white;
+    /* Set the color for visited links to white */
+}
+
+a:hover,
+a:active {
+    color: yellow;
+    /* Set the color for links on hover and when active to yellow */
 }
 
 
 
-    /* Styles for smaller screens like tablets (e.g., iPad) */
-    @media (max-width: 986px) {
-        body {
-            font-size: 16px;
-            /* Adjust the font size for readability on smaller screens */
-        }
-
-       
-
-        .searchBar {
-            flex-direction: column;
-            /* Stack elements vertically on smaller screens */
-            text-align: center;
-            /* Center-align text */
-        }
-
-        .search {
-            margin-left: 0;
-            /* Remove left margin */
-        }
-
-        .chartContainer,
-        .chart1,
-        .chart {
-            width: 90%;
-            /* Make charts take up 90% of the screen width */
-            margin: 30px auto;
-            /* Center-align charts and add some space */
-        }
-
-        .pagination {
-            margin-right: 0;
-            /* Remove right margin for pagination */
-        }
-        .navbar {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    
-        .toggle-button {
-            display: flex;
-        }
-    
-        .navbar-links {
-            display: none;
-            width: 100%;
-        }
-    
-        .navbar-links ul {
-            width: 100%;
-            flex-direction: column;
-        }
-    
-        .navbar-links ul li {
-            text-align: left;
-        }
-    
-        .navbar-links ul li a {
-            padding: .5rem 1rem;
-        }
-    
-        .navbar-links.active {
-            display: flex;
-        }
-    }
-
-    /* Styles for even smaller screens like smartphones */
-    @media (max-width: 480px) {
-        body {
-            font-size: 14px;
-            /* Further reduce font size for smartphones */
-        }
 
 
-          
-    .brand-title>img {
-        width: 19vw;
-        /* Set width */
+
+
+
+@media (max-width: 768px) {
+    img {
+        width: 20vw;
+        /* Adjust image width for smaller screens */
         height: 5vh;
-        /* Adjust height automatically */
+        /* Adjust image height for smaller screens */
+        border-radius: 10px;
+        /* Add rounded corners */
     }
-     
 
-        .search {
-            width: 90%;
-            /* Make the search input take up 90% of the screen width */
-            margin: 10px auto;
-            /* Center-align the search input and add some space */
-        }
-
-        .chartContainer,
-        .chart1,
-        .chart {
-            width: 95%;
-            /* Make charts take up 95% of the screen width */
-            margin: 10px auto;
-            /* Center-align charts and add some space */
-        }
-
-        .pagination {
-            margin-right: 0;
-            /* Remove right margin for pagination */
-        }
-        .navbar {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    
-        .toggle-button {
-            display: flex;
-        }
-    
-        .navbar-links {
-            display: none;
-            width: 100%;
-        }
-    
-        .navbar-links ul {
-            width: 100%;
-            flex-direction: column;
-        }
-    
-        .navbar-links ul li {
-            text-align: left;
-        }
-    
-        .navbar-links ul li a {
-            padding: .5rem 1rem;
-        }
-    
-        .navbar-links.active {
-            display: flex;
-        }
+    section {
+        width: 90%;
+        /* Adjust section width for smaller screens */
     }
+}
