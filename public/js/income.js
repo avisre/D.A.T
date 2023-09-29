@@ -140,7 +140,7 @@ function createOrUpdateChart(data, revenueData, netProfitData) {
                     beginAtZero: true,
                     title:{
                         display:true,
-                        text:'USD in Billions'
+                        text:'USD (Billions)'
                     }
 
                 }
@@ -279,7 +279,7 @@ function createBarChart(data, cash, longTermDebt, commonStockShares) {
                     beginAtZero: true,
                     title:{
                         display:true,
-                        text:'USD in Billions'
+                        text:'USD (Billions)'
                     }
                 }
             },
