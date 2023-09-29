@@ -158,10 +158,7 @@ a[href="/register"]{
     color: white;
 }
 
-a:visited {
-    color: white;
-    /* Set the color for visited links to white */
-}
+
 
 a:hover,
 a:active {
