@@ -154,9 +154,7 @@ button:hover {
     /* Change the border color to white on hover */
 }
 
-a[href="/register"]{
-    color: white;
-}
+
 
 
 
@@ -166,7 +164,10 @@ a:active {
     /* Set the color for links on hover and when active to yellow */
 }
 
-
+a{
+    color:white;
+    
+}
 
 
 
