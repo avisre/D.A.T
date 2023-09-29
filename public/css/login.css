@@ -154,9 +154,10 @@ button:hover {
     /* Change the border color to white on hover */
 }
 
-a{
+a[href="/register"]{
     color: white;
 }
+
 a:visited {
     color: white;
     /* Set the color for visited links to white */
