@@ -474,7 +474,9 @@ footer {
         width: 100vw;
     }
    
-
+.ch{
+    width: 240px;
+}
     .content-section {
         flex-direction: column;
     }
