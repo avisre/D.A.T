@@ -166,7 +166,9 @@ a:active {
     /* Set the color for links on hover and when active to yellow */
 }
 
-
+a{
+    color:white;
+}
 
 
 
