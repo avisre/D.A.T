@@ -158,12 +158,13 @@ button:hover {
 
 
 
-a:hover,
-a:active {
+a{
     color: white;
     /* Set the color for links on hover and when active to yellow */
 }
-
+a:visited{
+    color:white;
+}
 
 
 
