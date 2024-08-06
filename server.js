@@ -46,7 +46,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Connect to an online MongoDB instance named 'stockApp'
-mongoose.connect('mongodb+srv://birkbeck:birkbeck@birkbeck.tqawffy.mongodb.net/stockApp',
+mongoose.connect('mongodb+srv://project:project@cluster0.kos1k7l.mongodb.net/stockApp',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
