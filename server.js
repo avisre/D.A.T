@@ -33,6 +33,7 @@ app.use(express.static('public'));
 
 // Use the 'body-parser' middleware to parse request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); 
 
 // Set up session middleware with a secret key
 app.use(session({
@@ -67,6 +68,17 @@ const userSchema = new mongoose.Schema({
     password: String,
 });
 
+// Define the schema for the contact form data
+const contactSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    message: String,
+    date: {
+        type: Date,
+        default: Date.now
+    },
+});
+
 // Method for validating user passwords using bcrypt made with knowledge gained from reading documentation about bcrypt
 // // Dan Arias (2018). Hashing in Action: Understanding bcrypt. [online] Auth0 - Blog. 
 // Available at: https://auth0.com/blog/hashing-in-action-understanding-bcrypt/. 
@@ -77,7 +89,7 @@ userSchema.methods.validatePassword = async function (password) {
 // Create models for the 'Stock' and 'User' collections
 const Stock = mongoose.model('Stock', stockSchema);
 const User = mongoose.model('User', userSchema);
-
+const Contact = mongoose.model('Contact', contactSchema);
 // Configure Passport to use the LocalStrategy for user authentication
 passport.use(new LocalStrategy(
     async (username, password, done) => {
@@ -179,6 +191,25 @@ app.get('/', ensureAuthenticated, async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+app.post('/contact',ensureAuthenticated, async (req, res) => {
+    const { name, email, message } = req.body;
+
+    // Validate incoming data
+    if (!name || !email || !message) {
+        return res.status(400).json({ error: 'All fields are required.' });
+    }
+
+    try {
+        const newContact = new Contact({ name, email, message });
+        await newContact.save();
+
+        res.status(201).json({ success: true, message: 'Your message has been received. We will get back to you shortly.' });
+    } catch (err) {
+        console.error('Error saving contact form data:', err);
+        res.status(500).json({ error: 'An error occurred while saving your message. Please try again later.' });
+    }
+});
+
 
 // Define a route for adding stocks to a user's portfolio
 app.post('/addStock', ensureAuthenticated, async (req, res) => {
@@ -250,6 +281,18 @@ app.post('/register', async (req, res) => {
         console.error(err);
         res.status(500).send('Internal Server Error');
     }
+});
+app.post('/contact', async (req, res) => {
+    const { name, email, message } = req.body;
+
+    // Handle the form data here, e.g., save it to a database or send an email
+
+    console.log(`Contact form submitted:
+      Name: ${name}
+      Email: ${email}
+      Message: ${message}`);
+
+    res.json({ success: true, message: 'Message sent successfully!' });
 });
 // Define a route for user logout
 app.get('/logout', function (req, res, next) {
