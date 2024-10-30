@@ -1,70 +1,98 @@
 <!-- views/register.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Set the character encoding for the document -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
     <!-- Define the viewport settings for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RTXEQMNVQT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- smartlook -->
+    <script type="text/javascript">
+      window.smartlook ||
+        (function (d) {
+          var o = (smartlook = function () {
+              o.api.push(arguments);
+            }),
+            h = d.getElementsByTagName("head")[0];
+          var c = d.createElement("script");
+          o.api = new Array();
+          c.async = true;
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.src = "https://web-sdk.smartlook.com/recorder.js";
+          h.appendChild(c);
+        })(document);
+      smartlook("init", "4913089ab2c89958997ab8d88e7121f7050be7b0", {
+        region: "eu",
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RTXEQMNVQT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-RTXEQMNVQT');
-</script>
+      gtag("config", "G-RTXEQMNVQT");
+    </script>
     <!-- Set the favicon for the website -->
-    <link rel="icon"
-        href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <link
+      rel="icon"
+      href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800"
+    />
 
     <!-- Preconnect to external font resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Link to an external font family from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link to an external stylesheet for styling specific to this page (assuming it's similar to the login page) -->
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login.css" />
 
     <!-- Set the title of the registration page -->
     <title>Register</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- Header section containing the logo -->
-        <img src="/assets/D.A.T (7).png" alt="logo">
+      <!-- Header section containing the logo -->
+      <img src="/assets/D.A.T (7).png" alt="logo" />
     </header>
     <section>
-        <!-- Section for user registration -->
+      <!-- Section for user registration -->
 
-        <!-- Heading for the registration section -->
-        <h1>Register</h1>
+      <!-- Heading for the registration section -->
+      <h1>Register</h1>
 
-        <!-- Form for user registration, sending data to /register endpoint using the POST method -->
-        <form action="/register" method="post">
-            <!-- Label and input field for username -->
-            <label for="username">Username: </label>
-            <input type="text" name="username" required>
+      <!-- Form for user registration, sending data to /register endpoint using the POST method -->
+      <form action="/register" method="post">
+        <!-- Label and input field for username -->
+        <label for="username">Username: </label>
+        <input type="text" name="username" required />
 
-            <!-- Label and input field for password -->
-            <label for="password">Password: </label>
-            <input type="password" name="password" required>
+        <!-- Label and input field for password -->
+        <label for="password">Password: </label>
+        <input type="password" name="password" required />
 
-            <!-- Registration button -->
-            <div class="btn">
-                <button type="submit">Register</button>
-            </div>
-        </form>
+        <!-- Registration button -->
+        <div class="btn">
+          <button type="submit">Register</button>
+        </div>
+      </form>
 
-        <!-- Link to the login page for users who want to go back to login -->
-        <p>Go back <a href="/login">Login</a></p>
+      <!-- Link to the login page for users who want to go back to login -->
+      <p>Go back <a href="/login">Login</a></p>
     </section>
-</body>
-
+  </body>
 </html>
