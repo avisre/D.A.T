@@ -1,118 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Set the character encoding for the document -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
     <!-- Define the viewport settings for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RTXEQMNVQT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- smartlook -->
+    <script type="text/javascript">
+      window.smartlook ||
+        (function (d) {
+          var o = (smartlook = function () {
+              o.api.push(arguments);
+            }),
+            h = d.getElementsByTagName("head")[0];
+          var c = d.createElement("script");
+          o.api = new Array();
+          c.async = true;
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.src = "https://web-sdk.smartlook.com/recorder.js";
+          h.appendChild(c);
+        })(document);
+      smartlook("init", "4913089ab2c89958997ab8d88e7121f7050be7b0", {
+        region: "eu",
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RTXEQMNVQT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-RTXEQMNVQT');
-</script>
+      gtag("config", "G-RTXEQMNVQT");
+    </script>
     <!-- Set the favicon for the website -->
-    <link rel="icon"
-        href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <link
+      rel="icon"
+      href="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=800"
+    />
 
     <!-- Preconnect to external font resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Link to an external font family from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link to an external stylesheet for styling specific to this page -->
-    <link rel="stylesheet" href="/css/sitemap.css">
+    <link rel="stylesheet" href="/css/sitemap.css" />
 
     <!-- Set the title of the Sitemap page -->
     <title>Sitemap</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Start of the webpage body -->
     <header>
-        <!-- Header section containing navigation -->
+      <!-- Header section containing navigation -->
 
-        <nav class="navbar">
-            <div class="brand-title">  <img src="/assets/logo.png" alt="Logo"></div>
-            <a href="#" class="toggle-button">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-              <ul>
-                <li><a href="/index">Home</a></li>
-                <li > <a href="/api">Stock Fundamentals</a></li>
-                <li> <a href="/news">Stocks News</a></li>
-                <li> <a href="/asian">Asian Stocks</a></li>
-                <li> <a href="/land">About us</a></li>
-                <li> <a class="active-link" href="/sitemap">Sitemap</a></li>
-                <li> <a  href="/video">Video</a></li>
-                <li><a href="/logout">Logout</a></li>
-              </ul>
-            </div>
-          </nav>
+      <nav class="navbar">
+        <div class="brand-title"><img src="/assets/logo.png" alt="Logo" /></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/api">Stock Fundamentals</a></li>
+            <li><a href="/news">Stocks News</a></li>
+            <li><a href="/asian">Asian Stocks</a></li>
+            <li><a href="/land">About us</a></li>
+            <li><a class="active-link" href="/sitemap">Sitemap</a></li>
+            <li><a href="/video">Video</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <div class="container">
-        <!-- Container for sitemap content -->
+      <!-- Container for sitemap content -->
 
-        <div class="sitemap">
-            <!-- Sitemap section -->
+      <div class="sitemap">
+        <!-- Sitemap section -->
 
-            <!-- Section title for Stock Dashboard -->
-            <div class="section">Stock Dashboard</div>
+        <!-- Section title for Stock Dashboard -->
+        <div class="section">Stock Dashboard</div>
 
-            <!-- Page link for Portfolio -->
-            <div class="page"><a href="/index">Portfolio</a></div>
+        <!-- Page link for Portfolio -->
+        <div class="page"><a href="/index">Portfolio</a></div>
 
+        <!-- Section title for Stock Fundamentals -->
+        <div class="section">Stock Fundamentals</div>
 
+        <!-- Page links for Company Stock Charts, Income Statements, and Balance Sheets -->
+        <div class="page"><a href="/api">Company Financials</a></div>
 
-            <!-- Section title for Stock Fundamentals -->
-            <div class="section">Stock Fundamentals</div>
+        <div class="section">Stock News</div>
 
-            <!-- Page links for Company Stock Charts, Income Statements, and Balance Sheets -->
-            <div class="page"><a href="/api">Company Financials</a></div>
-
-            <div class="section">Stock News</div>
-
-            <!-- Page link for Stock News -->
-            <div class="page"> <a href="/news">Stock News</a></div>
-            <!-- Section title for Sitemap -->
-            <div class="section">Stock News</div>
-            <!-- Page link for Sitemap -->
-            <div class="page"> <a href="/sitemap">Sitemap</a></div>
-            <div class="section">Video</div>
-            <!-- Section title for video -->
-            <div class="page"> <a href="/video">Video</a></div>
-            <!-- Page link for Logout -->
-            <div class="section">Logout</div>
-            <div class="page"> <a href="/logout">Logout</a></div>
-        </div>
-
+        <!-- Page link for Stock News -->
+        <div class="page"><a href="/news">Stock News</a></div>
+        <!-- Section title for Sitemap -->
+        <div class="section">Stock News</div>
+        <!-- Page link for Sitemap -->
+        <div class="page"><a href="/sitemap">Sitemap</a></div>
+        <div class="section">Video</div>
+        <!-- Section title for video -->
+        <div class="page"><a href="/video">Video</a></div>
+        <!-- Page link for Logout -->
+        <div class="section">Logout</div>
+        <div class="page"><a href="/logout">Logout</a></div>
+      </div>
     </div>
 
     <footer>
-        <!-- Footer section with pagination links -->
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="/index">1</a>
-            <a href="/api">2</a>
-            <a href="/asian">3</a>
-            <a href="/news">4</a>
-            <a href="/land">5</a>
-            <a href="/video">6</a>
-            <a href="#">&raquo;</a>
-        </div>
+      <!-- Footer section with pagination links -->
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="/index">1</a>
+        <a href="/api">2</a>
+        <a href="/asian">3</a>
+        <a href="/news">4</a>
+        <a href="/land">5</a>
+        <a href="/video">6</a>
+        <a href="#">&raquo;</a>
+      </div>
     </footer>
     <script src="/js/video.js"></script>
-</body>
-
+  </body>
 </html>
+
