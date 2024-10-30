@@ -1,13 +1,5 @@
-// server.js
-// The code is hosted at https://github.com/HardRoker-7/D.A.T
-// The site is live at https://render.com/
-// using
-// The username and password for Render is 
-// Username:avinashsreekumar007@yahoo.com
-// password:birkbeck
-// / The username and password for Mongodb Backend is 
-// Username:avinashsreekumar007@yahoo.com
-// password:birkbeck
+// 
+
 
 
 // Import required Node.js modules and libraries
