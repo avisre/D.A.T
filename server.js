@@ -55,6 +55,7 @@ const stockSchema = new mongoose.Schema({
 
 const userSchema = new mongoose.Schema({
     username: String,
+    email: String,
     password: String,
 });
 
@@ -76,15 +77,17 @@ userSchema.methods.validatePassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 
+
 // Create models for the 'Stock' and 'User' collections
 const Stock = mongoose.model('Stock', stockSchema);
 const User = mongoose.model('User', userSchema);
 const Contact = mongoose.model('Contact', contactSchema);
 // Configure Passport to use the LocalStrategy for user authentication
 passport.use(new LocalStrategy(
-    async (username, password, done) => {
+    { usernameField: 'email' }, // Specify the field name for the email
+    async (email, password, done) => {
         try {
-            const user = await User.findOne({ username });
+            const user = await User.findOne({ email });
             if (!user) {
                 return done(null, false, { message: 'Incorrect username.' });
             }
@@ -97,6 +100,24 @@ passport.use(new LocalStrategy(
         }
     }
 ));
+passport.use(new LocalStrategy(
+    { usernameField: 'email' }, // Specify the field name for the email
+    async (email, password, done) => {
+        try {
+            const user = await User.findOne({ email });
+            if (!user) {
+                return done(null, false, { message: 'Incorrect username.' });
+            }
+            if (!(await user.validatePassword(password))) {
+                return done(null, false, { message: 'Incorrect password.' });
+            }
+            return done(null, user);
+        } catch (err) {
+            return done(err);
+        }
+    }
+));
+
 
 // Serialize and deserialize user objects for session management
 passport.serializeUser((user, done) => {
@@ -257,21 +278,17 @@ app.get('/register', (req, res) => {
 
 // Define a route for handling user registration
 app.post('/register', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     try {
-        // Hash the user's password for secure storage
-        const hashedPassword = await bcrypt.hash(password, 10);
-
-        // Create a new user record with the hashed password
-        await User.create({ username, password: hashedPassword });
-
-        // Redirect the user to the login page after successful registration
+        const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
+        await User.create({ email, password: hashedPassword }); // Store the hashed password
         res.redirect('/login');
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
     }
 });
+
 app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
